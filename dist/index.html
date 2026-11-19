@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10151d">
+<title>청운시 부동산 연대기</title>
+<meta name="description" content="청운시를 탐색하고 매매·금융·개발의 결정을 내리는 부동산 투자 RPG.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <div class="brand"><span class="crest" aria-hidden="true">雲</span><div><span class="brand-en">CHEONGUN CITY</span><h1>청운시 부동산 연대기</h1></div></div>
+  <div class="metrics" id="metrics"></div>
+  <button id="settings" class="icon-button" aria-label="게임 설정" title="게임 설정">⚙</button>
+</header>
+<main>
+  <div class="workspace">
+    <section class="city" aria-label="청운시 지도">
+      <div class="scene">
+        <div class="map-title"><span>CHEONGUN · CITY MAP</span><h2>청운시</h2><p>생활권을 선택해 매물과 주민을 만나보세요.</p></div>
+        <div id="markers"></div>
+        <div class="map-footer"><span>◈ 청운천 도시권</span><div id="modes" class="segments"></div></div>
+      </div>
+      <section class="news" aria-label="청운일보"><div class="news-mark">報</div><div id="news"></div><button id="show-news" class="ghost">소식 보기</button></section>
+    </section>
+    <aside class="side" aria-label="투자 메뉴">
+      <nav class="tabs" aria-label="투자 항목" id="tabs"></nav>
+      <div id="panel" class="panel"></div>
+    </aside>
+  </div>
+  <footer class="turnbar"><div class="turn-info"><small>INVESTMENT TIMELINE</small><strong id="turn-title"></strong></div><div class="timeline"><div class="track"><i id="progress"></i></div><small id="progress-label"></small></div><button class="ghost" id="log">거래 기록</button><button class="gold advance" id="advance">분기 마감 <span aria-hidden="true">◷</span></button></footer>
+</main>
+<dialog id="modal" aria-labelledby="modal-title"><div class="modal-head"><h2 id="modal-title"></h2><button id="close" class="icon-button" aria-label="닫기">×</button></div><div id="modal-body"></div></dialog>
+<div id="toast" role="status"></div>
+</body>
+</html>
